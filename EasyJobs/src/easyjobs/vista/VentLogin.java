@@ -6,6 +6,7 @@
 package easyjobs.vista;
 
 import easyjobs.controlador.Controlador;
+import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -21,8 +22,7 @@ public class VentLogin extends javax.swing.JFrame {
         control = ctrl;
         initComponents();
         btnRegistrar.addActionListener(ctrl);
-        btnLogin.addActionListener(ctrl);
-        
+        btnLogin.addActionListener(ctrl);        
     }
 
     public JButton getBtnLogin() {

@@ -6,6 +6,7 @@
 package easyjobs;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,12 +16,24 @@ public class Usuario implements Serializable{
     
     String nombre;
     String correo;
-    String contraseña;    
+    String contraseña;  
+    ArrayList<String> trabajos;
+    boolean enviarNotificaciones;
+
+    public boolean isEnviarNotificaciones() {
+        return enviarNotificaciones;
+    }
+
+    public void setEnviarNotificaciones(boolean enviarNotificaciones) {
+        this.enviarNotificaciones = enviarNotificaciones;
+    }
     
-    public Usuario(String nombre, String correo, String contraseña){
+    public Usuario(String nombre, String correo, String contraseña, ArrayList<String> trabajos){
         this.nombre = nombre;
         this.correo = correo;
         this.contraseña = contraseña;
+        this.trabajos = (ArrayList<String>) trabajos.clone();
+        this.enviarNotificaciones = true;
     }
 
     public String getNombre() {
